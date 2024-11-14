@@ -10,7 +10,7 @@ phone_number_validator = RegexValidator(
 class CustomUser(AbstractUser):
     phone_number=models.CharField(max_length=10,validators=[phone_number_validator],unique=True)
     date_of_birth=models.DateField( null=True,blank=True)
-    last_login_ip=models.GenericIPAddressField(null=True,blank=True)
+    last_login_ip = models.GenericIPAddressField(null=True, blank=True)
 
     def __str__(self):
         return self.username
