@@ -10,4 +10,5 @@ class CaptureIPMiddleware:
             request.user.last_login_ip=request.META.get('REMOTE_ADDR')
             request.user.save()
             print('working')
+        print("hoohoho")
         return response
