@@ -1,12 +1,11 @@
 # User Authentication API with Docker and Django
-<hr>
 
 This project is a Django REST API for user management, including user registration, login, and profile retrieval. The API is designed with JWT token authentication and includes a custom user model with additional fields like `phone_number`, `date_of_birth`, and `last_login_ip`. 
 
 Docker is used to containerize the application, and PostgreSQL is used as the database backend.
 
 ## Features
-<hr>
+
 - **Custom User Model**: Extends `AbstractUser` with additional fields:
   - `phone_number` (validated for Indian phone number format)
   - `date_of_birth`
