@@ -61,8 +61,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'api.middleware.CaptureIPMiddleware',
 ]
+
+AUTH_USER_MODEL='api.CustomUser'
 
 ROOT_URLCONF = 'auth_api.urls'
 
@@ -83,8 +84,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'auth_api.wsgi.application'
-
-AUTH_USER_MODEL='api.CustomUser'
 
 
 # Database

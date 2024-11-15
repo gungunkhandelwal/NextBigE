@@ -13,6 +13,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         user=CustomUser.objects.create_user(**validate_data)
         return user
 
+# Login serializer and check if it is authenticated 
 class LoginSerializer(serializers.Serializer):
     username=serializers.CharField()
     password=serializers.CharField(write_only=True)
@@ -27,6 +28,7 @@ class LoginSerializer(serializers.Serializer):
         return data 
 
 
+# Serializing all detail of user
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model=CustomUser

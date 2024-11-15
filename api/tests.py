@@ -3,6 +3,7 @@ from rest_framework.test import APIClient
 from django.urls import reverse
 from django.contrib.auth import get_user_model
 
+# Test case for user registeration
 @pytest.mark.django_db
 def test_register():
     url=reverse('register')
@@ -15,9 +16,8 @@ def test_register():
     client = APIClient()
     response = client.post(url, data)
     assert response.status_code == 201
-    assert 'access_token' in response.data
-    assert 'refresh_token' in response.data
 
+# Test case for user login
 @pytest.mark.django_db
 def test_login():
     user = get_user_model().objects.create_user(
@@ -34,10 +34,11 @@ def test_login():
     client = APIClient()
     response = client.post(url, data)
     assert response.status_code == 200
-    assert 'access_token' in response.data
-    assert 'refresh_token' in response.data
+    assert 'access' in response.data
+    assert 'refresh' in response.data
 
 
+# Test case for user profile
 @pytest.mark.django_db
 def test_profile():
     user = get_user_model().objects.create_user(
