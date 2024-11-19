@@ -3,24 +3,21 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Django stuff
-*.log
-db.sqlite3
-*.sqlite3
-
 # Virtual environemnts
 myenv/
 
 # Environment variables
 .env
 
-# IDE and editor settings
+#Git-related files
+.git/
+.gitignore
+
+#IDE and editor settings
 .vscode/
 .idea/
 
-# OS-specific files
+#OS-specific files
 .DS_Store
 Thumbs.db
 
-# Pytest cache
-.pytest_cache/
